@@ -1,5 +1,7 @@
 (function() {
 
+    // Burger
+
     document.addEventListener('click', burgerInit)
     
     function burgerInit(e) {
@@ -17,6 +19,8 @@
         }
 
     }
+
+    // Modal
 
     const modal = document.querySelector('.modal')
     const modalButton = document.querySelector('.about__img-button')
@@ -36,6 +40,30 @@
         if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
             document.body.classList.remove('body--opened-modal')
         }
+
+    }
+
+    // Tabs
+
+    const tabControls = document.querySelector('.tab-controls')
+    
+    tabControls.addEventListener('click', toggleTab)
+
+    function toggleTab(e) {
+
+        const tabControl = e.target.closest('.tab-controls__link')
+
+        if (!tabControl) return
+
+        e.preventDefault()
+
+        const tabContentID = tabControl.getAttribute('href')
+
+        document.querySelector('.tab-content--show').classList.remove('tab-content--show')
+        document.querySelector(tabContentID).classList.add('tab-content--show')
+        
+        document.querySelector('.tab-controls__link--active').classList.remove('tab-controls__link--active')
+        tabControl.classList.add('tab-controls__link--active')
 
     }
 

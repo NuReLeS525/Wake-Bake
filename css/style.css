@@ -40,11 +40,22 @@
   padding: 140px 0px;
 }
 
+.main__program {
+  padding-bottom: 145px;
+}
+
 .container {
   max-width: 1310px;
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
+}
+
+.title {
+  font-family: 'Gabriola';
+  font-size: 74px;
+  line-height: 0.82;
+  color: var(--accent-text);
 }
 
 .button {
@@ -496,12 +507,7 @@
   margin-bottom: 30px;
 }
 
-.about__title {
-  font-family: Gabriola;
-  font-size: 74px;
-  line-height: 0.82;
-  color: var(--accent-text);
-}
+.about__title {}
 
 .about__title-text {}
 
@@ -534,6 +540,70 @@
 }
 
 .about__grid-text {}
+
+/* ================================================== */
+
+.program {}
+
+.program__top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.program__heading {
+}
+
+.program__title {
+  margin-bottom: 20px;
+}
+
+.program__text {}
+
+.tab-controls {
+  display: flex;
+  gap: 26px;
+}
+
+.tab-controls__item {
+
+}
+
+.tab-controls__link {
+  display: block;
+  border-radius: 100px;
+  padding: 14px 30px;
+  box-shadow: 0px 4px 20px 0px rgba(206, 195, 185, 0.30);
+
+  transition: var(--transition);
+}
+
+.tab-controls__link:hover {
+  background: #FFE0CB;
+  box-shadow: 0px 4px 20px 0px rgba(206, 195, 185, 0);
+}
+
+.tab-controls__link--active {
+  background: #FFE0CB;
+  box-shadow: 0px 4px 20px 0px rgba(206, 195, 185, 0);
+}
+
+.tab-content {
+  background: #c2c2c2;
+  border-radius: var(--border-radius);
+  height: 400px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+}
+
+.tab-content--show {
+  display: flex;
+}
 
 /* ================================================== */
 
@@ -699,7 +769,7 @@
   .about__body {
     align-self: center;
   }
-  
+
   .about__img {
     grid-row: auto;
   }
@@ -807,23 +877,19 @@
   .main__about {
     padding: 60px 0px 80px;
   }
-  
+
+  .title {
+    font-size: 12vw;
+  }
+
   /*=============================*/
 
   .header__hero {
     padding-bottom: 80px;
   }
 
-  .hero__title {
-    font-size: 12vw;
-  }
-
   /*=============================*/
 
-  .about__title {
-    font-size: 12vw;
-  }
-  
   .about__img-control {
     bottom: 0;
     left: 0;
