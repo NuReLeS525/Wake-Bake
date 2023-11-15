@@ -1,11 +1,18 @@
 :root {
   --general-text: #312C27;
   --accent-text: #1F1711;
+  --accent-text-2: #CEAAD0;
   --general-bg: #FFF9F4;
   --accent-bg: #FFE0CB;
   --accent-color: #FFA55C;
+  --input-color: #AC907A;
   --transition: all .4s;
   --border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 .body {
@@ -41,7 +48,8 @@
 }
 
 .main__program,
-.main__gallery {
+.main__gallery,
+.main__testimonials {
   padding-bottom: 145px;
 }
 
@@ -120,7 +128,7 @@
 
 .modal__cancel:hover path,
 .modal__cancel:hover rect {
-  stroke: #AC907A;
+  stroke: var(--input-color);
 }
 
 .modal__img {
@@ -140,8 +148,6 @@
   margin-bottom: 30px;
 }
 
-.modal__form {}
-
 .modal__form-label {
   margin-bottom: 10px;
 }
@@ -156,7 +162,7 @@
   top: 12px;
   left: 28px;
   font-size: 11px;
-  color: #AC907A;
+  color: var(--input-color);
 
   opacity: 0;
   visibility: hidden;
@@ -167,7 +173,7 @@
   display: block;
   width: 100%;
   background: #00000000;
-  border: 1px solid #AC907A;
+  border: 1px solid var(--input-color);
   border-radius: 100px;
   padding: 19px 42px 19px 28px;
   font-size: 16px;
@@ -179,7 +185,7 @@
 }
 
 .field__input::placeholder {
-  color: #AC907A;
+  color: var(--input-color);
   transition: var(--transition);
 }
 
